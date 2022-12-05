@@ -1,0 +1,164 @@
+*{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+body{
+    background-color: gray;
+    overflow-x: hidden;
+}
+
+.book-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* height: 500px; */
+}
+
+.pagging{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.page-container button{
+    background-color: white;
+    width: 30px;
+    cursor: pointer;
+}
+.forward ,.backward {
+    background-color: white;
+    width: 30px;
+    cursor: pointer;
+    
+}
+
+/* .selected-page{
+    background-color: lightgreen;
+} */
+
+h1{
+    color: rgb(227, 150, 67);
+}
+thead{
+    background-color: rgb(227, 150, 67);
+}
+
+tbody{
+    height: 20px;
+    background-color: beige;
+    /* border-collapse: collapse; */
+}
+
+td{
+    /* max-height: 60px; */
+    height: 60px;
+    width: 200px;
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+.create-book input{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    height: 28px;
+}
+.create-book .btn {
+    height: 40px;
+    width: 160px;
+    font-size: 18px;
+    background-color: rgb(227, 150, 67);
+    border-radius: 12px;
+    border-color: rgb(227, 150, 67);
+    margin: auto;
+    margin-bottom:15px ;
+    text-align: center;
+    display: flex;
+    /* margin: 10px 0 0 205px; */
+}
+td .btn{
+    border-radius: 8px;
+    border:none ;
+    height: 22px;
+    margin: 5px;
+    color: aliceblue;
+}
+
+.read{
+    background-color: rgb(83, 83, 212);
+}
+.update{
+    background-color: orange;
+}
+.delete{
+    background-color: red;
+}
+.close{
+    border-radius: 4px;
+    background-color: beige;
+    height: 30px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.modal {
+    background-color: #111;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 150%;
+    height: 70vh;
+    width: 450px;
+    min-width: 300px;
+    text-align: center;
+    color: white;
+}
+.modal.open {
+    left: 75%;
+    transition: left .5s;
+}
+.modal img{
+    height: 200px;
+}
+
+.book-filter{
+    text-align: center;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 20px;
+}
+/* 
+.table-books{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 820px;
+    gap: 30px;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    height: 100px;
+}
+.child{
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    width: 100px;
+    background-color: red;
+} */
+
+
+
+
+
+section .hidden{
+    display: none;
+}

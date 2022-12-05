@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body onload="onInit()">
+    <section class="book-filter">
+        <label>
+            Filter By Maximum Price:
+            <input type="range" min="0" max="150" value="0" class="filter-price-range"
+                onchange="this.title = this.value;onSetFilterBy({maxPrice: this.value})">
+        </label>
+        <label>
+            Filter By Minimum Rate:
+            <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                onchange="this.title = this.value;onSetFilterBy({minRate: this.value})">
+        </label>
+        <label>
+            Search:
+            <input type="search" class="search-box" placeholder="Search..."
+                onchange="this.title = this.value;onSetFilterBy({search:this.value})">
+            <div class="search-box-modal">Press Enter to confirm.</div>
+        </label>
+    </section>
+    <section class="pagging">
+        <button class="forward" onclick="onPrevPage()">&lt</button>
+        <div class="page-container">
+
+        </div>
+        <button class="backward" onclick="onNextPage()">&gt</button>
+    </section>
+    <div class="book-container">
+        <table>
+            <thead>
+                <tr>
+                    <td style="cursor:pointer;">ID</td>
+                    <td style="cursor:pointer;" onclick="onSortBy('title')">Title</td>
+                    <td style="cursor:pointer;" onclick="onSortBy('price')">Price</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody class="book-list">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="modal">
+    </div>
+    <section class="create-book">
+        <button class="create-book btn" onclick="onOpenInput()">Create new book</button>
+        <input type="text" class="input hidden" placeholder="Enter book name..." onchange="onAddBook(this.value)">
+    </section>
+    <!-- <section class="table-books">
+        <div class="child">book1</div>
+        <div class="child">book2</div>
+        <div class="child">book3</div>
+        <div class="child">book4</div>
+        <div class="child">book5</div>
+    </section> -->
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/book-storage-service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>
